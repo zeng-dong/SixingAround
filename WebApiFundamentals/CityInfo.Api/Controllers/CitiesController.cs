@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CityInfo.Api.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CityInfo.Api.Controllers;
 
@@ -23,8 +24,12 @@ public class CitiesController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> GetCity(int id)
+    public ActionResult<CityDto> GetCity(int id)
     {
-        return new JsonResult(CitiesDataStore.Current.Cities.FirstOrDefault(x => x.Id == id));
+        var city = CitiesDataStore.Current.Cities.FirstOrDefault(x => x.Id == id);
+
+        if (city == null) return NotFound();
+
+        return Ok(city);
     }
 }
