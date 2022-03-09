@@ -5,15 +5,25 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApiFundamentals", "WebApiFundamentals", "{EA6EEA6E-2E69-48A2-A0E5-C98A0D8C04F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityInfo.Api", "WebApiFundamentals\CityInfo.Api\CityInfo.Api.csproj", "{E42F7DC4-BFFA-4923-BA13-54CBB6ED2976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityInfo.Api", "WebApiFundamentals\CityInfo.Api\CityInfo.Api.csproj", "{E42F7DC4-BFFA-4923-BA13-54CBB6ED2976}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazor", "Blazor", "{CB7D2F41-035C-4DCB-90E1-1591D36821C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstBlazor.Server", "Blazor\FirstBlazor\Server\FirstBlazor.Server.csproj", "{ED18937D-5D92-4945-A5C5-A71C3D57B1AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstBlazor.Server", "Blazor\FirstBlazor\Server\FirstBlazor.Server.csproj", "{ED18937D-5D92-4945-A5C5-A71C3D57B1AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstBlazor.Client", "Blazor\FirstBlazor\Client\FirstBlazor.Client.csproj", "{F873CCA0-9936-4F31-B68D-8F711BB3FE38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstBlazor.Client", "Blazor\FirstBlazor\Client\FirstBlazor.Client.csproj", "{F873CCA0-9936-4F31-B68D-8F711BB3FE38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstBlazor.Shared", "Blazor\FirstBlazor\Shared\FirstBlazor.Shared.csproj", "{9589E1BC-47B3-40FC-A9FB-100E4F1B5509}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstBlazor.Shared", "Blazor\FirstBlazor\Shared\FirstBlazor.Shared.csproj", "{9589E1BC-47B3-40FC-A9FB-100E4F1B5509}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazoring", "Blazoring", "{0790B19B-D172-44E0-9974-414D5C87A641}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ECommerce", "ECommerce", "{CA8A4387-B47E-4133-870E-484291E08856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Server", "Blazoring\ECommerce\Server\ECommerce.Server.csproj", "{1B52B252-8486-4264-A212-F1F3CD9B5859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Client", "Blazoring\ECommerce\Client\ECommerce.Client.csproj", "{BFBCCC79-13AE-4693-A1F7-EE3EEFC58556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Shared", "Blazoring\ECommerce\Shared\ECommerce.Shared.csproj", "{BB70984C-256E-464B-A61E-CFAB1359A647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +47,18 @@ Global
 		{9589E1BC-47B3-40FC-A9FB-100E4F1B5509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9589E1BC-47B3-40FC-A9FB-100E4F1B5509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9589E1BC-47B3-40FC-A9FB-100E4F1B5509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B52B252-8486-4264-A212-F1F3CD9B5859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B52B252-8486-4264-A212-F1F3CD9B5859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B52B252-8486-4264-A212-F1F3CD9B5859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B52B252-8486-4264-A212-F1F3CD9B5859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBCCC79-13AE-4693-A1F7-EE3EEFC58556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBCCC79-13AE-4693-A1F7-EE3EEFC58556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBCCC79-13AE-4693-A1F7-EE3EEFC58556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBCCC79-13AE-4693-A1F7-EE3EEFC58556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB70984C-256E-464B-A61E-CFAB1359A647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB70984C-256E-464B-A61E-CFAB1359A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB70984C-256E-464B-A61E-CFAB1359A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB70984C-256E-464B-A61E-CFAB1359A647}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +68,10 @@ Global
 		{ED18937D-5D92-4945-A5C5-A71C3D57B1AF} = {CB7D2F41-035C-4DCB-90E1-1591D36821C6}
 		{F873CCA0-9936-4F31-B68D-8F711BB3FE38} = {CB7D2F41-035C-4DCB-90E1-1591D36821C6}
 		{9589E1BC-47B3-40FC-A9FB-100E4F1B5509} = {CB7D2F41-035C-4DCB-90E1-1591D36821C6}
+		{CA8A4387-B47E-4133-870E-484291E08856} = {0790B19B-D172-44E0-9974-414D5C87A641}
+		{1B52B252-8486-4264-A212-F1F3CD9B5859} = {CA8A4387-B47E-4133-870E-484291E08856}
+		{BFBCCC79-13AE-4693-A1F7-EE3EEFC58556} = {CA8A4387-B47E-4133-870E-484291E08856}
+		{BB70984C-256E-464B-A61E-CFAB1359A647} = {CA8A4387-B47E-4133-870E-484291E08856}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1990C17F-8F6E-47DD-9CE4-C71A6BA926F8}
