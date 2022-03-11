@@ -1,0 +1,52 @@
+﻿<ul class="list-unstyled">
+    @foreach(var product in products)
+    {
+        <li class="media my-3">
+            <div class="mr-2">
+                <a href="#">
+                    <img src="@product.ImageUrl" alt="@product.Title" /> 
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="#">
+                    <h4 class="mb-0">@product.Title</h4>
+                </a>
+                <p>@product.Description</p>
+                <h5 class="price">
+                    $@product.Price
+                </h5>
+            </div>
+        </li>
+    }
+</ul>
+
+
+@code {
+    private static List<Product> products = new List<Product>
+    {
+        new Product
+        {
+            Id = 1,
+            Title = "the adventure",
+            Description = "abd abc",
+            ImageUrl = "http://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy#/media/File:H2G2_UK_front_cover.jpg",
+            Price = 9.99m
+        },
+        new Product
+        {
+            Id = 2,
+            Title = "aaa",
+            Description = "aaa bbb ccc",
+            ImageUrl = "https://en.wikipedia.org/wiki/Ready_Player_One#/media/Ready_Player_One_cover.jpg",
+            Price = 9.99m
+        },
+        new Product
+        {
+            Id = 3,
+            Title = "aaa bbb",
+            Description = "aaa bbb ccc",
+            ImageUrl = "https://en.wikipedia.org/wiki/Ready_Player_One#/media/File:Ready_Player_One_cover.jpg",
+            Price = 9.99m
+        }
+    };
+}
