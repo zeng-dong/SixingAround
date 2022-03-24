@@ -1,0 +1,4 @@
+﻿dotnet ef migrations add Initial
+dotnet ef database update
+
+# if you need to reset the database, then run the dotnet ef database drop --force
