@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+
 builder.Services.AddDbContext<DataContext>(opts =>
 {
     opts.UseSqlServer(builder.Configuration["ConnectionStrings:PeopleConnection"]);
@@ -13,7 +16,13 @@ var app = builder.Build();
 
 app.UseMiddleware<Advanced.WebApp.TestMiddleware>();
 
-app.MapGet("/", () => "Hello World!");
+///app.MapGet("/", () => "Hello World!");
+
+app.UseStaticFiles();
+
+app.MapControllers();
+app.MapControllerRoute("controllers", "controllers/{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
 
 var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<DataContext>();
 SeedData.SeedDatabase(context);
