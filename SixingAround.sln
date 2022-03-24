@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Client", "Blazori
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Shared", "Blazoring\ECommerce\Shared\ECommerce.Shared.csproj", "{BB70984C-256E-464B-A61E-CFAB1359A647}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApressProAspnetCoreSix", "ApressProAspnetCoreSix", "{35A12F93-608A-4EF0-867C-9C2B99B95036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced", "ApressProAspnetCoreSix\Advanced\Advanced.csproj", "{553B34FF-D91F-4C20-85F1-B89FFBA473D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{BB70984C-256E-464B-A61E-CFAB1359A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB70984C-256E-464B-A61E-CFAB1359A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB70984C-256E-464B-A61E-CFAB1359A647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{553B34FF-D91F-4C20-85F1-B89FFBA473D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553B34FF-D91F-4C20-85F1-B89FFBA473D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553B34FF-D91F-4C20-85F1-B89FFBA473D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{553B34FF-D91F-4C20-85F1-B89FFBA473D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +57,7 @@ Global
 		{1B52B252-8486-4264-A212-F1F3CD9B5859} = {CA8A4387-B47E-4133-870E-484291E08856}
 		{BFBCCC79-13AE-4693-A1F7-EE3EEFC58556} = {CA8A4387-B47E-4133-870E-484291E08856}
 		{BB70984C-256E-464B-A61E-CFAB1359A647} = {CA8A4387-B47E-4133-870E-484291E08856}
+		{553B34FF-D91F-4C20-85F1-B89FFBA473D6} = {35A12F93-608A-4EF0-867C-9C2B99B95036}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1990C17F-8F6E-47DD-9CE4-C71A6BA926F8}
