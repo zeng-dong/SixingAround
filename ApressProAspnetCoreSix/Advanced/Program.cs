@@ -11,6 +11,8 @@ builder.Services.AddDbContext<DataContext>(opts =>
 
 var app = builder.Build();
 
+app.UseMiddleware<Advanced.WebApp.TestMiddleware>();
+
 app.MapGet("/", () => "Hello World!");
 
 var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<DataContext>();
