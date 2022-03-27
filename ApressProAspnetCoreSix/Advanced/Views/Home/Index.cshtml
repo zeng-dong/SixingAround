@@ -1,6 +1,10 @@
 ﻿@model PeopleListViewModel
 
-<h4 class="bg-primary text-white text-center p-2">People</h4>
+<h4 class="bg-primary text-white text-center p-2">People Blazor</h4>
+
+<component type="typeof(Advanced.Blazor.PeopleList)" render-mode="Server" />
+
+<h4 class="bg-primary text-white text-center p-2">People View</h4>
 
 <table class="table table-sm table-bordered table-striped">
     <thead>
