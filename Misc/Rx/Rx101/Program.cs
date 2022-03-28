@@ -1,6 +1,14 @@
 ﻿using System.Reactive.Linq;
 
-var query = from number in Enumerable.Range(1, 10) select number;
-var oq = query.ToObservable();
+(from number in Enumerable.Range(1, 10) select number).ToObservable()
+    .Subscribe(
+        Console.WriteLine,
+        () => Console.WriteLine("I am done.")
+    );
 
-oq.Subscribe(Console.WriteLine, () => { Console.WriteLine("I am done."); });
+/// IObservable<int> xs =
+
+Observable.Range(1, 10).Subscribe(
+    (i) => Console.WriteLine(i * 2),
+    () => Console.WriteLine("I am done.")
+);
