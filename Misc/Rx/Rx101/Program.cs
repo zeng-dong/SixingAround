@@ -9,6 +9,6 @@
 /// IObservable<int> xs =
 
 Observable.Range(1, 10).Subscribe(
-    (i) => Console.WriteLine(i * 2),
+    i => Console.WriteLine(i * 3),
     () => Console.WriteLine("I am done.")
 );
