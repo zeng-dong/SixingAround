@@ -18,11 +18,10 @@ public class UsingAndInvokingDelegate
             }
         };
 
-        var processor = new OrderProcessor();
-
-        processor.OnOrderInitialized = SendMessageToWarehouse;
-
-        processor.Process(order);
+        new OrderProcessor
+        {
+            OnOrderInitialized = SendMessageToWarehouse
+        }.Process(order);
     }
 
     static void SendMessageToWarehouse()
