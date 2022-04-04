@@ -4,11 +4,11 @@ namespace WarehouseManagement.Business;
 
 public class OrderProcessor
 {
-    public delegate void OrderInitialized();
+    public delegate void OrderInitialized(Order order);
 
     // instead of expose a public property, this one will
     // only be invoked by this class: see the Process() method
-    public delegate void ProcessCompleted();
+    public delegate void ProcessCompleted(Order order);
 
     public OrderInitialized? OnOrderInitialized { get; set; }
 
@@ -16,17 +16,15 @@ public class OrderProcessor
     {
         ArgumentNullException.ThrowIfNull(order, nameof(order));
 
-        OnOrderInitialized?.Invoke();
+        OnOrderInitialized?.Invoke(order);
 
-        //if (OnOrderInitialized is not null)
-        //{
-        //    OnOrderInitialized();
-        //}
+        ////if (OnOrderInitialized is not null)
+        ////    OnOrderInitialized();
     }
 
     public void Process(Order order, ProcessCompleted onCompleted = default)
     {
         Initialize(order);
-        onCompleted?.Invoke();
+        onCompleted?.Invoke(order);
     }
 }

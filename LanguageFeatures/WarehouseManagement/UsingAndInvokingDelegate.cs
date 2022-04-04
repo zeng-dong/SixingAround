@@ -24,13 +24,13 @@ public class UsingAndInvokingDelegate
         }.Process(order, SendConfirmationEmail);
     }
 
-    static void SendMessageToWarehouse()
+    static void SendMessageToWarehouse(Order order)
     {
-        Console.WriteLine("Please pack the order");
+        Console.WriteLine($"Please pack the order for {order.OrderNumber} - {string.Concat(order.LineItems.Select(x => x.Name))}");
     }
 
-    static void SendConfirmationEmail()
+    static void SendConfirmationEmail(Order order)
     {
-        Console.WriteLine("Order comfirmed");
+        Console.WriteLine($"Order comfirmed for {order.OrderNumber} --- {string.Concat(order.LineItems.Select(x => x.Name))}");
     }
 }
