@@ -21,7 +21,7 @@ public class UsingAndInvokingDelegate
         new OrderProcessor
         {
             OnOrderInitialized = SendMessageToWarehouse
-        }.Process(order);
+        }.Process(order, SendConfirmationEmail);
     }
 
     static void SendMessageToWarehouse()

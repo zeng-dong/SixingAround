@@ -6,6 +6,10 @@ public class OrderProcessor
 {
     public delegate void OrderInitialized();
 
+    // instead of expose a public property, this one will
+    // only be invoked by this class: see the Process() method
+    public delegate void ProcessCompleted();
+
     public OrderInitialized? OnOrderInitialized { get; set; }
 
     private void Initialize(Order order)
@@ -20,8 +24,9 @@ public class OrderProcessor
         //}
     }
 
-    public void Process(Order order)
+    public void Process(Order order, ProcessCompleted onCompleted = default)
     {
         Initialize(order);
+        onCompleted?.Invoke();
     }
 }
