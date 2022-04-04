@@ -4,7 +4,7 @@ namespace WarehouseManagement.Business;
 
 public class OrderProcessor
 {
-    public delegate void OrderInitialized(Order order);
+    public delegate bool OrderInitialized(Order order);
 
     // instead of expose a public property, this one will
     // only be invoked by this class: see the Process() method
@@ -16,7 +16,11 @@ public class OrderProcessor
     {
         ArgumentNullException.ThrowIfNull(order, nameof(order));
 
-        OnOrderInitialized?.Invoke(order);
+        ////OnOrderInitialized?.Invoke(order);
+        if (OnOrderInitialized?.Invoke(order) == false)
+        {
+            throw new InvalidOperationException($"Could not initialize {order.OrderNumber}");
+        }
 
         ////if (OnOrderInitialized is not null)
         ////    OnOrderInitialized();
