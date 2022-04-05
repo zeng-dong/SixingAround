@@ -21,15 +21,22 @@ public class UsingAndInvokingDelegate
         OrderProcessor.ProcessCompleted chain = StepOne;
         chain += StepTwo;
         chain += StepThree;
+        chain -= StepTwo;
 
-        //new OrderProcessor
-        //{
-        //    OnOrderInitialized = SendMessageToWarehouse
-        //}.Process(order, SendConfirmationEmail);
+        OrderProcessor.ProcessCompleted lambdaChain = (thing) => Console.WriteLine($"step one: compiler knows it: {thing.OrderNumber}");
+        lambdaChain += (thing) => Console.WriteLine($"step two: compiler knows it: {thing.OrderNumber}");
+        lambdaChain += (thing) => Console.WriteLine($"step three: compiler knows it: {thing.OrderNumber}");
+        // removing a lambda is not simple
+
+        ////new OrderProcessor
+        ////{
+        ////    OnOrderInitialized = SendMessageToWarehouse
+        ////}.Process(order, SendConfirmationEmail);
 
         var processor = new OrderProcessor { OnOrderInitialized = SendMessageToWarehouse };
         processor.Process(order, SendConfirmationEmail);
         processor.Process(order, chain);
+        processor.Process(order, lambdaChain);
     }
 
     static bool SendMessageToWarehouse(Order order)
