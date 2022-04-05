@@ -18,10 +18,18 @@ public class UsingAndInvokingDelegate
             }
         };
 
-        new OrderProcessor
-        {
-            OnOrderInitialized = SendMessageToWarehouse
-        }.Process(order, SendConfirmationEmail);
+        OrderProcessor.ProcessCompleted chain = StepOne;
+        chain += StepTwo;
+        chain += StepThree;
+
+        //new OrderProcessor
+        //{
+        //    OnOrderInitialized = SendMessageToWarehouse
+        //}.Process(order, SendConfirmationEmail);
+
+        var processor = new OrderProcessor { OnOrderInitialized = SendMessageToWarehouse };
+        processor.Process(order, SendConfirmationEmail);
+        processor.Process(order, chain);
     }
 
     static bool SendMessageToWarehouse(Order order)
@@ -34,4 +42,10 @@ public class UsingAndInvokingDelegate
     {
         Console.WriteLine($"Order comfirmed for {order.OrderNumber} --- {string.Concat(order.LineItems.Select(x => x.Name))}");
     }
+
+    static void StepOne(Order order) => Console.WriteLine("Step one");
+
+    static void StepTwo(Order order) => Console.WriteLine("Step two");
+
+    static void StepThree(Order order) => Console.WriteLine("Step three");
 }
