@@ -24,7 +24,6 @@ public class OrderProcessor
 
         ////if (OnOrderInitialized is not null)
         ////    OnOrderInitialized();
-        /// test
     }
 
     public void Process(Order order, ProcessCompleted onCompleted = default)
