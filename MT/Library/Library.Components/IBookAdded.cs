@@ -1,6 +1,6 @@
 ﻿namespace Library.Components;
 
-public interface BookAdded
+public interface IBookAdded
 {
     Guid BookId { get; }
 
