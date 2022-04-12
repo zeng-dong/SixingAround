@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DistributedTracing", "Distr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderAPI", "Microservices\DistributedTracing\OrderAPI\OrderAPI.csproj", "{3F35DEFB-8C5B-4157-87FB-F00B56A8E6E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabySteps", "Microservices\DistributedTracing\BabySteps\BabySteps.csproj", "{F69EF3D2-EF46-4E22-AD19-1D3A2E15EDB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{3F35DEFB-8C5B-4157-87FB-F00B56A8E6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F35DEFB-8C5B-4157-87FB-F00B56A8E6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F35DEFB-8C5B-4157-87FB-F00B56A8E6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69EF3D2-EF46-4E22-AD19-1D3A2E15EDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69EF3D2-EF46-4E22-AD19-1D3A2E15EDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69EF3D2-EF46-4E22-AD19-1D3A2E15EDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69EF3D2-EF46-4E22-AD19-1D3A2E15EDB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{E4D878BE-3FB0-4B81-AAF0-F721EEB4EF29} = {86981B7E-E5B5-4B50-BA8D-AF30F4A027CA}
 		{BCBB8F68-3889-4CA4-A0C2-E0AEAE7FCC7C} = {43EA636E-709B-47CD-B08A-3D2DD54C03CF}
 		{3F35DEFB-8C5B-4157-87FB-F00B56A8E6E2} = {BCBB8F68-3889-4CA4-A0C2-E0AEAE7FCC7C}
+		{F69EF3D2-EF46-4E22-AD19-1D3A2E15EDB6} = {BCBB8F68-3889-4CA4-A0C2-E0AEAE7FCC7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1990C17F-8F6E-47DD-9CE4-C71A6BA926F8}
