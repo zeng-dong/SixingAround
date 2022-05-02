@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.StaticFiles;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+app.UseMetricServer();
+app.UseHttpMetrics();
 
 app.UseAuthorization();
 
