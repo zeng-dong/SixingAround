@@ -49,9 +49,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Poland", "Poland", "{A7D372
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventSourcing", "EventSourcing", "{BA2E6CEA-EC78-4B00-BB64-917ED85B6799}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfPacedEventSourcing", "Poland\EventSourcing\SelfPacedEventSourcing\SelfPacedEventSourcing.csproj", "{DD53FB6D-4E85-4DCB-B335-0090405C60D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfPacedEventSourcing", "Poland\EventSourcing\SelfPacedEventSourcing\SelfPacedEventSourcing.csproj", "{DD53FB6D-4E85-4DCB-B335-0090405C60D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfPacedEventSourcingTests", "Poland\EventSroucing\SelfPacedEventSourcingTests\SelfPacedEventSourcingTests.csproj", "{8DD80261-94C1-4C07-B1DC-0B955E88FD99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfPacedEventSourcingTests", "Poland\EventSroucing\SelfPacedEventSourcingTests\SelfPacedEventSourcingTests.csproj", "{8DD80261-94C1-4C07-B1DC-0B955E88FD99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docking", "Docking", "{CD846DC1-93ED-42E4-A684-BE81AC395B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi", "Docking\WeatherApi\WeatherApi.csproj", "{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +111,10 @@ Global
 		{8DD80261-94C1-4C07-B1DC-0B955E88FD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD80261-94C1-4C07-B1DC-0B955E88FD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD80261-94C1-4C07-B1DC-0B955E88FD99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,6 +137,7 @@ Global
 		{BA2E6CEA-EC78-4B00-BB64-917ED85B6799} = {A7D372A7-70E9-43EB-971B-39170847B55A}
 		{DD53FB6D-4E85-4DCB-B335-0090405C60D1} = {BA2E6CEA-EC78-4B00-BB64-917ED85B6799}
 		{8DD80261-94C1-4C07-B1DC-0B955E88FD99} = {BA2E6CEA-EC78-4B00-BB64-917ED85B6799}
+		{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C} = {CD846DC1-93ED-42E4-A684-BE81AC395B6F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1990C17F-8F6E-47DD-9CE4-C71A6BA926F8}
