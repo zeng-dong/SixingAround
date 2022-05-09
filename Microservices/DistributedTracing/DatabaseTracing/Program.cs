@@ -4,6 +4,8 @@ using OpenTelemetry.Exporter;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using System.Diagnostics;
+using LightStep;
+using OpenTracing.Util;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -66,12 +68,29 @@ builder.Services.AddOpenTelemetryTracing(builder => builder
     // Ensures that all activities are recorded and sent to exporter
     .SetSampler(new AlwaysOnSampler())
     // Exports spans to Lightstep
-    .AddOtlpExporter(otlpOptions =>
+    ////.AddOtlpExporter(otlpOptions =>
+    ////{
+    ////    otlpOptions.Endpoint = new Uri("https://ingest.lightstep.com:443/traces/otlp/v0.9");
+    ////    otlpOptions.Headers = $"lightstep-access-token={lsToken}";
+    ////    otlpOptions.Protocol = OtlpExportProtocol.HttpProtobuf;
+    ////})
+    .AddOtlpExporter(opts =>
     {
-        otlpOptions.Endpoint = new Uri("https://ingest.lightstep.com:443/traces/otlp/v0.9");
-        otlpOptions.Headers = $"lightstep-access-token={lsToken}";
-        otlpOptions.Protocol = OtlpExportProtocol.HttpProtobuf;
-    }));
+        opts.Endpoint = new Uri("http://localhost:4317");
+    })
+);
+
+////var satelliteOptions = new SatelliteOptions("ingest.lightstep.com");
+////var overrideTags = new Dictionary<string, object>
+//// {
+////   { LightStepConstants.ComponentNameKey, "YOUR_SERVICE_NAME" },
+////   {"my_tag", "foobar"}
+//// };
+////
+////var tracerOptions = new Options("YOUR_ACCESS_TOKEN").WithSatellite(satelliteOptions).WithTags(overrideTags);
+////var lightStepTracer = new LightStep.Tracer(tracerOptions);
+////
+////GlobalTracer.Register(lightStepTracer);
 
 var app = builder.Build();
 
@@ -87,6 +106,15 @@ app.MapPost("/ems/billing", async (Timekeeping timekeepingRecord, SqlConnection 
     activity?.SetTag(nameof(Timekeeping.EmployeeId), timekeepingRecord.EmployeeId);
     activity?.SetTag(nameof(Timekeeping.ProjectId), timekeepingRecord.ProjectId);
     activity?.SetTag(nameof(Timekeeping.WeekClosingDate), timekeepingRecord.WeekClosingDate);
+
+    ////var span = lightStepTracer.BuildSpan("testSpan").Start();
+    ////span.Log("This is a log message!");
+    ////// for tag value, use either "client" or "server" depending on whether
+    ////// this service receives or creates requests
+    ////span.SetTag("span.kind", "client");
+    ////span.Finish();
+    ////// manually flush the tracer to make sure your span is sent.
+    ////lightStepTracer.Flush();
 
     await db.ExecuteAsync(
         "INSERT INTO Timekeeping Values(@EmployeeId, @ProjectId, @WeekClosingDate, @HoursWorked)",
