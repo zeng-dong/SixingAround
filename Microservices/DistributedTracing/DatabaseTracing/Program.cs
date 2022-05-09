@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using OpenTelemetry.Exporter;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -58,7 +59,7 @@ builder.Services.AddOpenTelemetryTracing(builder => builder
         options.RecordException = true;
         options.Enrich = (activity, x, y) => activity.SetTag("db.type", "sql");
     })
-    .AddSource("my-corp.ems.ems-api")
+    .AddSource("zd.ems.ems-api")
     // Create resources (key-value pairs) that describe your service such as service name and version
     .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("ems-api")
         .AddAttributes(new[] { new KeyValuePair<string, object>("service.version", "1.0.0.0") }))
@@ -77,8 +78,16 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+var activitySource = new ActivitySource("zd.ems.ems-api");
+
 app.MapPost("/ems/billing", async (Timekeeping timekeepingRecord, SqlConnection db) =>
 {
+    using var activity = activitySource.StartActivity("Record project work", ActivityKind.Server);
+    activity?.AddEvent(new ActivityEvent("Project billed"));
+    activity?.SetTag(nameof(Timekeeping.EmployeeId), timekeepingRecord.EmployeeId);
+    activity?.SetTag(nameof(Timekeeping.ProjectId), timekeepingRecord.ProjectId);
+    activity?.SetTag(nameof(Timekeeping.WeekClosingDate), timekeepingRecord.WeekClosingDate);
+
     await db.ExecuteAsync(
         "INSERT INTO Timekeeping Values(@EmployeeId, @ProjectId, @WeekClosingDate, @HoursWorked)",
         timekeepingRecord);
