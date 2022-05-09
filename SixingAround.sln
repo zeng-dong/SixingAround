@@ -55,9 +55,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfPacedEventSourcingTests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docking", "Docking", "{CD846DC1-93ED-42E4-A684-BE81AC395B6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi", "Docking\WeatherApi\WeatherApi.csproj", "{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApi", "Docking\WeatherApi\WeatherApi.csproj", "{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApiNos", "Docking\WeatherApiNos\WeatherApiNos.csproj", "{90920B73-3C70-47A0-A392-DFDBBD37102E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApiNos", "Docking\WeatherApiNos\WeatherApiNos.csproj", "{90920B73-3C70-47A0-A392-DFDBBD37102E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseTracing", "Microservices\DistributedTracing\DatabaseTracing\DatabaseTracing.csproj", "{234B4278-E9FC-48EF-9F3C-AEE64A54FBD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +123,10 @@ Global
 		{90920B73-3C70-47A0-A392-DFDBBD37102E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90920B73-3C70-47A0-A392-DFDBBD37102E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90920B73-3C70-47A0-A392-DFDBBD37102E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{234B4278-E9FC-48EF-9F3C-AEE64A54FBD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234B4278-E9FC-48EF-9F3C-AEE64A54FBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234B4278-E9FC-48EF-9F3C-AEE64A54FBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234B4278-E9FC-48EF-9F3C-AEE64A54FBD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -145,6 +151,7 @@ Global
 		{8DD80261-94C1-4C07-B1DC-0B955E88FD99} = {BA2E6CEA-EC78-4B00-BB64-917ED85B6799}
 		{38178A32-AFBA-43B6-A4DB-9ACE68D6BE5C} = {CD846DC1-93ED-42E4-A684-BE81AC395B6F}
 		{90920B73-3C70-47A0-A392-DFDBBD37102E} = {CD846DC1-93ED-42E4-A684-BE81AC395B6F}
+		{234B4278-E9FC-48EF-9F3C-AEE64A54FBD7} = {BCBB8F68-3889-4CA4-A0C2-E0AEAE7FCC7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1990C17F-8F6E-47DD-9CE4-C71A6BA926F8}

@@ -1,0 +1,33 @@
+﻿# run image
+docker run -e ACCEPT_EULA=Y -e MSSQL_SA_PASSWORD=G52ndTOur -e MSSQL_PID=Developer -e MSSQL_AGENT_ENABLED=true -p 1434:1433 -v C:/_Volumn/sql/data:/var/opt/mssql/data -v C:/_Volumn/sql/log:/var/opt/mssql/log -v C:/_Volumn/sql/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-latest
+
+# create db and tables
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'EmployeeManagementService')
+BEGIN
+  CREATE DATABASE EmployeeManagementService
+END
+GO
+
+USE EmployeeManagementService
+
+IF OBJECT_ID('[dbo].[Timekeeping]', 'U') IS NULL
+BEGIN
+  CREATE TABLE [Timekeeping] (
+    [EmployeeId]      INT  NOT NULL,
+    [ProjectId]       INT  NOT NULL,
+    [WeekClosingDate] DATETIME NOT NULL,
+    [HoursWorked]     INT  NOT NULL,
+    CONSTRAINT [PK_Timekeeping] PRIMARY KEY CLUSTERED ([EmployeeId] ASC, [ProjectId] ASC,  [WeekClosingDate] ASC)
+  )
+END
+GO
+
+IF OBJECT_ID('[dbo].[Payroll]', 'U') IS NULL
+BEGIN
+  CREATE TABLE [Payroll] (
+    [EmployeeId]   INT   NOT NULL,
+    [PayRateInUSD] MONEY DEFAULT 0 NOT NULL,
+    CONSTRAINT [PK_Payroll] PRIMARY KEY CLUSTERED ([EmployeeId] ASC)
+  )
+END
+GO
