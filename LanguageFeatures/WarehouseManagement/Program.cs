@@ -1,5 +1,7 @@
 ﻿using WarehouseManagement;
 
-UsingAndInvokingDelegate.Run();
+///UsingAndInvokingDelegate.Run();
+
+FuncCompose.Run();
 
 Console.WriteLine("Done!");
