@@ -47,7 +47,7 @@ public class UsingAndInvokingDelegate
 
     static void SendConfirmationEmail(Order order)
     {
-        Console.WriteLine($"Order comfirmed for {order.OrderNumber} --- {string.Concat(order.LineItems.Select(x => x.Name))}");
+        Console.WriteLine($"Order confirmed for {order.OrderNumber} --- {string.Concat(order.LineItems.Select(x => x.Name))}");
     }
 
     static void StepOne(Order order) => Console.WriteLine("Step one");
