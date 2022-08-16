@@ -12,5 +12,7 @@ internal static class PassingFuncs
     {
         Console.WriteLine(Execute(Add, 3));
         Console.WriteLine(Execute(Time, 3));
+
+        Console.WriteLine(Execute(Time, Execute(Add, 2)));
     }
 }
