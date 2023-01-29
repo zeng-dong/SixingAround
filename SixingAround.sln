@@ -61,7 +61,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApiNos", "Docking\We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseTracing", "Microservices\DistributedTracing\DatabaseTracing\DatabaseTracing.csproj", "{234B4278-E9FC-48EF-9F3C-AEE64A54FBD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingTrails.Client", "Blazoring\BlazorInAction\BlazingTrails\BlazingTrails.Client\BlazingTrails.Client.csproj", "{C3589705-37C2-48AA-B904-82294BD3665E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingTrails.Client", "Blazoring\BlazorInAction\BlazingTrails\BlazingTrails.Client\BlazingTrails.Client.csproj", "{C3589705-37C2-48AA-B904-82294BD3665E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
