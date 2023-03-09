@@ -1,9 +1,20 @@
-﻿namespace TextDotJson;
+﻿using System.Text.Json;
 
-internal class Program
+namespace TextDotJson;
+
+internal static class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var weatherForecast = new WeatherForecast
+        {
+            Date = DateTime.Parse("2021-12-01"),
+            TemperatureCelsius = 25,
+            Summary = "Hot"
+        };
+
+        string jsonString = JsonSerializer.Serialize(weatherForecast);
+
+        Console.WriteLine(jsonString);
     }
 }
