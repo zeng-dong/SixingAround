@@ -8,6 +8,6 @@ public class WeatherForecast
     public int Pressure { get; set; }
     public int Humidity { get; set; }
     public Coordinates? Coordinates { get; set; }
-    public Wind? Wind { get; set; };
+    public Wind? Wind { get; set; }
     public string[]? SummaryWords { get; set; }
 }

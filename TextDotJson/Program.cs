@@ -2,8 +2,10 @@
 
 internal static class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
-        SimpleSerializer.SimpleSerialize();
+        /// SimpleSerializer.SimpleSerialize();
+
+        await AsyncSerializer.AsyncSerialize();
     }
 }
