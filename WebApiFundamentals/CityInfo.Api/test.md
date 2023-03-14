@@ -5,7 +5,9 @@ A quick demo of using Mermaid t oembed diagrams
 ## flowchart
 
 ```mermaid
-graph LR
-	A --> B
-	A --> C
+graph TB
+	A[Start] -.-> B(Process 1)
+	A --> C[[Process 2]]
+	B ==o D([Stop])
+	C --> D
 ```
