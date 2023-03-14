@@ -11,3 +11,14 @@ graph TB
 	B ==o D([Stop])
 	C --> D
 ```
+
+## class diagram
+
+```mermaid
+classDiagram
+	class Person{
+		Id
+		FirstName
+		LastName
+	}
+```
