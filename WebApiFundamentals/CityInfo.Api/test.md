@@ -41,3 +41,11 @@ pie title Pets adopted by volunteers
     "Cats" : 85
     "Rats" : 15
 ```
+
+```mermaid
+classDiagram
+    class ILogger {
+        <<interface>>
+        LogDebug(
+    }
+```
