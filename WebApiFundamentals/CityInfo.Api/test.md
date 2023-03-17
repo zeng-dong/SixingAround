@@ -46,6 +46,9 @@ pie title Pets adopted by volunteers
 classDiagram
     class ILogger {
         <<interface>>
-        LogDebug(
+        LogDebug(message: string)
+        LogInformation(message: string)
+        LogWarning(message: string)
+        LogError(e: Exception,  message: string)
     }
 ```
