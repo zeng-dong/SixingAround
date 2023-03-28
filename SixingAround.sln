@@ -67,9 +67,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextDotJson", "TextDotJson\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HttpClient", "HttpClient", "{208BBC4F-EB31-4B19-8CB2-9423564BC877}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.API", "LanguageFeatures\HttpClient\Movies.API\Movies.API.csproj", "{998E5467-9046-4D12-9D27-1086DEE94109}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.API", "LanguageFeatures\HttpClient\Movies.API\Movies.API.csproj", "{998E5467-9046-4D12-9D27-1086DEE94109}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Client", "LanguageFeatures\HttpClient\Movies.Client\Movies.Client.csproj", "{63E4278A-CEB0-43D8-9C74-443F67673D05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OodOop", "OodOop", "{40100854-5720-4D80-B242-A6578B08946B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethanysPieShop.InventoryManagement", "OodOop\BethanysPieShop.InventoryManagement\BethanysPieShop.InventoryManagement.csproj", "{702135C4-16B1-46F2-AF18-1F86B36BD423}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +157,10 @@ Global
 		{63E4278A-CEB0-43D8-9C74-443F67673D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63E4278A-CEB0-43D8-9C74-443F67673D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63E4278A-CEB0-43D8-9C74-443F67673D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702135C4-16B1-46F2-AF18-1F86B36BD423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702135C4-16B1-46F2-AF18-1F86B36BD423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702135C4-16B1-46F2-AF18-1F86B36BD423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702135C4-16B1-46F2-AF18-1F86B36BD423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -183,6 +191,8 @@ Global
 		{208BBC4F-EB31-4B19-8CB2-9423564BC877} = {1BC45F22-24F5-43BD-8A3E-89D3343663E5}
 		{998E5467-9046-4D12-9D27-1086DEE94109} = {208BBC4F-EB31-4B19-8CB2-9423564BC877}
 		{63E4278A-CEB0-43D8-9C74-443F67673D05} = {208BBC4F-EB31-4B19-8CB2-9423564BC877}
+		{40100854-5720-4D80-B242-A6578B08946B} = {EFD187F1-DC01-4C9A-AE82-4FF52F5EB1F0}
+		{702135C4-16B1-46F2-AF18-1F86B36BD423} = {40100854-5720-4D80-B242-A6578B08946B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1990C17F-8F6E-47DD-9CE4-C71A6BA926F8}
